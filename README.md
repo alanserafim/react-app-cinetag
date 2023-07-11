@@ -10,3 +10,5 @@
 | N. | Componente | Conceito trabalhado |
 |--- |--- |---
 | 1 | Inicio, Cabecalho, CabecalhoLink, Rodape |  Estruturando o projeto, importando fontes, imagens, componentização, css module.
+| 2 | Banner, Card, Container, Titulo |  Componentização, rotas, props e children, importando a partir de json, map
+
