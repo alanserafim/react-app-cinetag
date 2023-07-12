@@ -1,17 +1,26 @@
 import Banner from 'components/Banner'
 import styles from './Player.module.css'
 
-import React from 'react'
 import Titulo from 'components/Titulo'
-import { useParams } from 'react-router-dom'
-import videos from 'json/db.json'
 import NaoEncontrada from 'pages/NaoEncontrada'
+import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 
 export default function Player() {
+    const [video, setVideo] = useState([]);
 
     const parametros = useParams();
     //retorna o objeto video que tenha id igual ao id informado no parametro
-    const video = videos.find((video) => video.id === Number(parametros.id));
+   // const video = videos.find((video) => video.id === Number(parametros.id));
+
+   useEffect(()=>{
+    fetch(`https://my-json-server.typicode.com/alanserafim/react-app-cinetag-fakeapi/videos?=${parametros.id}`)
+    .then( resposta => resposta.json())
+    .then(dados => {
+      setVideo(...dados)
+        })
+     },[])
+
 
     if(!video){
         return <NaoEncontrada/>
