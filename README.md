@@ -10,5 +10,6 @@
 | N. | Componente | Conceito trabalhado |
 |--- |--- |---
 | 1 | Inicio, Cabecalho, CabecalhoLink, Rodape |  Estruturando o projeto, importando fontes, imagens, componentização, css module.
-| 2 | Banner, Card, Container, Titulo |  Componentização, rotas, props e children, importando a partir de json, map
+| 2 | Banner, Card, Container, Titulo |  Componentização, rotas, props e children, importando a partir de json, array.map
+| 3 | FavoritoContext |  Criar contextos através da ContextAPI, Construir hooks personalizados, procurando valores com array.some, excluindo valores com array.filter, React Context DevTool.
 
